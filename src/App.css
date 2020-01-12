@@ -1,0 +1,18 @@
+body {
+  background-color: #f1f3f3;
+}
+.axis {
+  font: 15px sans-serif;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #d4d8da;
+  stroke-width: 2px;
+  shape-rendering: crispEdges;
+}
+#chart {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
