@@ -25,6 +25,7 @@ const App = () => {
   const [param5, setParam5] = React.useState(80);
   const [param6, setParam6] = React.useState(80);
   const [param7, setParam7] = React.useState(80);
+  const [param8, setParam8] = React.useState(80);
 
   const handleChange = (setParam, event) => setParam(event.target.value);
   const handleParam1 = event => handleChange(setParam1, event);
@@ -34,6 +35,7 @@ const App = () => {
   const handleParam5 = event => handleChange(setParam5, event);
   const handleParam6 = event => handleChange(setParam6, event);
   const handleParam7 = event => handleChange(setParam7, event);
+  const handleParam8 = event => handleChange(setParam8, event);
 
   const data = [
     [
@@ -43,7 +45,8 @@ const App = () => {
       { area: "Value4 ", value: param4 },
       { area: "Value5 ", value: param5 },
       { area: "Value6 ", value: param6 },
-      { area: "Value7 ", value: param7 }
+      { area: "Value7 ", value: param7 },
+      { area: "Value8 ", value: param8 }
     ]
   ];
 
@@ -56,7 +59,7 @@ const App = () => {
 
   React.useEffect(() => {
     RadarChart(divRef.current, data, config);
-  }, [param1, param2, param3, param4, param5, param6, param7]);
+  }, [param1, param2, param3, param4, param5, param6, param7, param8]);
 
   return (
     <>
@@ -84,6 +87,9 @@ const App = () => {
         </li>
         <li>
           Value 7: <input value={param7} onChange={handleParam7} />
+        </li>
+        <li>
+          Value 8: <input value={param8} onChange={handleParam8} />
         </li>
       </ul>
     </>
